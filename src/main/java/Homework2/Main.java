@@ -1,12 +1,14 @@
+package Homework2;
+
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        int[] array = new int[]{1,-10,5,6,45,23,-45,-34,0,32,56,-1,2,-2};
-        int[] array2 = new int[]{15,10,51,-6,-5,3,-10,-34,0,32,56,-12,24,-52};
-        int[] array3 = new int[]{15,10,0,-6,-5,3,0,-34,0,32,56,0,24,-52};
+        int[] array = new int[]{1, -10, 5, 6, 45, 23, -45, -34, 0, 32, 56, -1, 2, -2};
+        int[] array2 = new int[]{15, 10, 51, -6, -5, 3, -10, -34, 0, 32, 56, -12, 24, -52};
+        int[] array3 = new int[]{15, 10, 0, -6, -5, 3, 0, -34, 0, 32, 56, 0, 24, -52};
 
         int value = 0;
         System.out.println("Список заданий: ");
@@ -37,7 +39,7 @@ public class Main {
 
         System.out.println("Введите номер задания: ");
         Scanner scanner = new Scanner(System.in);
-        if(scanner.hasNextInt()) {
+        if (scanner.hasNextInt()) {
             value = scanner.nextInt();
             switch (value) {
                 case 1:
@@ -83,8 +85,8 @@ public class Main {
                     Task10.zeroToEnd(array3);
                     break;
                 default:
-                    System.out.println("Введите корректный номер задания"); }
-        }
-        else System.out.println("Введите корректный номер задания");
+                    System.out.println("Введите корректный номер задания");
+            }
+        } else System.out.println("Введите корректный номер задания");
     }
 }

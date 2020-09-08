@@ -1,3 +1,5 @@
+package Homework2;
+
 import java.util.Scanner;
 
 public class Task5 {
@@ -13,22 +15,23 @@ public class Task5 {
             if (in.hasNextInt()) {
                 array[wentToCatch] = in.nextInt();
                 wentToCatch++;
-            }
-            else {
+            } else {
                 in.nextLine();
                 System.out.println("Введите корректное целое число");
             }
         } while (wentToCatch < 3);
 
-        makeNumber(array[0], array[1], array[2]);
+        makeNumber(array);
     }
 
-    public static void makeNumber(int i, int y, int j) {
-        if (i <= y && i <= j)
-            System.out.println("Минимум из трех чисел: " + i);
-        else if (y <= i && y <= j)
-            System.out.println("Минимум из трех чисел: " + y);
-        else
-            System.out.println("Минимум из трех чисел: " + j);
+    public static void makeNumber(int array[]) {
+        int min = array[0];
+
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+        System.out.println("Минимум из трех чисел: " + min);
     }
 }

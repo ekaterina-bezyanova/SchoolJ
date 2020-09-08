@@ -1,11 +1,14 @@
+package Homework2;
+
 public class Task8 {
 
     public static void maxInArray(int[] array) {
         int max = array[0];
 
         for (int i = 1; i < array.length; i++) {
-            if (array[i] > max)
+            if (array[i] > max) {
                 max = array[i];
+            }
         }
         System.out.println("Максимальное значение: " + max);
     }
@@ -14,8 +17,9 @@ public class Task8 {
         int sum = 0;
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > 0)
+            if (array[i] > 0) {
                 sum = sum + array[i];
+            }
         }
         System.out.println("Сумма положительных элементов: " + sum);
     }
@@ -24,8 +28,9 @@ public class Task8 {
         int sum = 0;
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] < 0 && (array[i] % 2 == 0))
+            if (array[i] < 0 && (array[i] % 2 == 0)) {
                 sum = sum + array[i];
+            }
         }
         System.out.println("Сумма четных отрицательных чисел: " + sum);
     }
@@ -34,8 +39,9 @@ public class Task8 {
         int quantity = 0;
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > 0)
+            if (array[i] > 0) {
                 quantity++;
+            }
         }
         System.out.println("Кол-во положительных элементов: " + quantity);
     }
@@ -50,7 +56,6 @@ public class Task8 {
                 average = average + array[i];
             }
         }
-        System.out.println("Среднее арифметическое отрицательных эл-тов: " + average/count);
-
+        System.out.println("Среднее арифметическое отрицательных эл-тов: " + average / count);
     }
 }
